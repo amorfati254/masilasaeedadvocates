@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.nav {
+		@apply cursor-pointer relative before:absolute before:block before:h-1 before:hover:bg-primary before:-bottom-2 before:w-full flex items-center;
+	}
+	.active-nav {
+		@apply cursor-pointer relative before:absolute before:block before:h-1 before:hover:bg-primary before:-bottom-2 before:w-full flex items-center text-primary;
+	}
+	.mobile-nav {
+		@apply cursor-pointer relative flex items-center p-2;
+	}
+	.active-mobile-nav {
+		@apply cursor-pointer relative flex items-center p-2 text-primary;
+	}
+}
