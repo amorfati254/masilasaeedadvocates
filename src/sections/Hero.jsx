@@ -39,7 +39,7 @@ const Hero = ({ variant }) => {
 	});
 	return (
 		<section className={variant.style}>
-			<div className="relative mx-auto max-w-screen-xl items-center flex sm:ml-10 pl-[7.5%]">
+			<div className="relative mx-auto max-w-screen-xl items-center flex sm:ml-10 sm:pl-[7.5%]">
 				<div className="flex flex-col items-center max-w-xl text-center sm:text-left sm:items-start">
 					<h1 className="font-extrabold text-white">
 						<animated.span

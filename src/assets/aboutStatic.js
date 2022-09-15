@@ -1,6 +1,3 @@
-import { ReactComponent as Chart } from "../assets/icons/chart.svg";
-import { ReactComponent as Goal } from "../assets/icons/goal.svg";
-import { ReactComponent as Vision } from "../assets/icons/vision.svg";
 const HeroSection = {
 	headingOne: "Lets Find Your",
 	headingTwo: "Justice",
@@ -53,21 +50,21 @@ const StatementSection = {
 		{
 			heading: "Mission",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Chart,
+			icon: "bi:bar-chart-fill",
 			variant: "primary",
 			key: "0",
 		},
 		{
 			heading: "Vision",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Vision,
+			icon: "ant-design:trophy-filled",
 			variant: "secondary",
 			key: "1",
 		},
 		{
 			heading: "Goal",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Goal,
+			icon: "fluent:target-arrow-24-filled",
 			variant: "primary",
 			key: "2",
 		},

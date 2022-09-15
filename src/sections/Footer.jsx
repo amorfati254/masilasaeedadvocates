@@ -2,12 +2,12 @@ import React from "react";
 import Button from "../components/Button";
 import FooterStatic from "../assets/footerStatic";
 import { Link } from "react-router-dom";
-
+import { Icon } from "@iconify/react";
 const Footer = () => {
 	//icon list
 	const iconList = FooterStatic.emailRow.icons.map((icon) => (
 		<Link to={icon.link} className="mx-1 " key={icon.key}>
-			<icon.icon className={icon.styles} />
+			<Icon icon={icon.icon} className={icon.styles} />
 		</Link>
 	));
 	const column2LinkList = FooterStatic.footerRow.column2.links.map((link) => (
@@ -73,7 +73,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="bg-secondary-dark py-4">
-				<div className="mx-10 md:mx-20 flex flex-col sm:flex-row justify-between">
+				<div className="mx-10 md:mx-20 flex flex-col items-center sm:flex-row sm:justify-between text-center sm:text-start">
 					<div className="text-secondary-light">
 						{FooterStatic.subFooter.column1.text}
 					</div>
@@ -81,7 +81,7 @@ const Footer = () => {
 						<span className="text-white block md:inline">
 							{FooterStatic.subFooter.column2.text}
 						</span>
-						<span className="text-white">
+						<span className="text-white block md:inline">
 							{FooterStatic.subFooter.column3.text}
 						</span>
 					</div>

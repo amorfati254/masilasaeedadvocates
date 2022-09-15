@@ -3,7 +3,7 @@ import IconCard from "./IconCard";
 const IconCards = ({ cards }) => {
 	const cardList = cards.map((card) => (
 		<IconCard cardInfo={card} key={card.key}>
-			{card.text}
+			<div className="text-center md:text-start">{card.text}</div>
 		</IconCard>
 	));
 	return (

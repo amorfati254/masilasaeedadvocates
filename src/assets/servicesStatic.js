@@ -1,6 +1,3 @@
-import { ReactComponent as Vision } from "../assets/icons/balance-law.svg";
-import { ReactComponent as Chart } from "../assets/icons/courthouse.svg";
-import { ReactComponent as Goal } from "../assets/icons/courthouse.svg";
 const HeroSection = {
 	headingOne: "Lets Find Your",
 	headingTwo: "Justice",
@@ -68,21 +65,21 @@ const ServicesSection = {
 		{
 			heading: "Mission",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Chart,
+			icon: "ph:scroll-bold",
 			variant: "primary",
 			key: "0",
 		},
 		{
 			heading: "Vision",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Vision,
+			icon: "la:coins",
 			variant: "secondary",
 			key: "1",
 		},
 		{
 			heading: "Goal",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Goal,
+			icon: "fa-solid:balance-scale",
 			variant: "primary",
 			key: "2",
 		},

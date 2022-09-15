@@ -1,25 +1,21 @@
-import { ReactComponent as Facebook } from "../assets/icons/facebook.svg";
-import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";
-import { ReactComponent as LinkedIn } from "../assets/icons/linkedin.svg";
-
 const Footer = {
 	emailRow: {
 		text: "Find Us On: ",
 		icons: [
 			{
-				icon: Facebook,
+				icon: "cib:facebook-f",
 				link: "#",
 				styles: "h-6 w-6 fill-primary bg-secondary-light p-1 rounded",
 				key: "1",
 			},
 			{
-				icon: Twitter,
+				icon: "akar-icons:twitter-fill",
 				link: "#",
 				styles: "h-6 w-6 fill-primary bg-secondary-light p-1 rounded",
 				key: "2",
 			},
 			{
-				icon: LinkedIn,
+				icon: "akar-icons:linkedin-fill",
 				link: "#",
 				styles: "h-6 w-6 fill-primary bg-secondary-light p-1 rounded",
 				key: "3",

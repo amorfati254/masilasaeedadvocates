@@ -1,7 +1,3 @@
-//importing icons for icon cards
-import { ReactComponent as Balance } from "../assets/icons/balance-law.svg";
-import { ReactComponent as CourtHouse } from "../assets/icons/courthouse.svg";
-
 const HeroSection = {
 	headingOne: "Lets Find Your",
 	headingTwo: "Justice",
@@ -13,21 +9,21 @@ const AboutSection = {
 		{
 			heading: "General Law",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Balance,
+			icon: "fa-solid:balance-scale",
 			variant: "primary",
 			key: "0",
 		},
 		{
 			heading: "General Law",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Balance,
+			icon: "ic:baseline-account-balance",
 			variant: "secondary",
 			key: "1",
 		},
 		{
 			heading: "General Law",
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas.",
-			icon: Balance,
+			icon: "fluent:gavel-20-filled",
 			variant: "primary",
 			key: "2",
 		},
