@@ -14,6 +14,8 @@ module.exports = {
 					"linear-gradient(90deg, rgba(11, 18, 27, 0.9)0%, rgba(11, 18, 27, 0.7)50%), url('https://masilasaeedadvocates.com/api/wp-content/uploads/2022/09/footeroptimised.webp')",
 				"services-hero-pattern":
 					"linear-gradient(90deg, rgba(11, 18, 27, 0.9)0%, rgba(11, 18, 27, 0.7)50%), url('https://masilasaeedadvocates.com/api/wp-content/uploads/2022/09/women-justice-symbol.webp')",
+				"contact-hero-pattern":
+					"linear-gradient(90deg, rgba(11, 18, 27, 0.9)0%, rgba(11, 18, 27, 0.7)50%), url('https://masilasaeedadvocates.com/api/wp-content/uploads/2022/09/mombasa.webp')",
 			},
 			colors: {
 				primary: {

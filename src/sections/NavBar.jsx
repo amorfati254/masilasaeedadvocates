@@ -2,49 +2,47 @@ import { useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 //import static assets
 import NavBarStatic from "../assets/navBarStatic";
-//import spring animation
-// import { SlideDown } from "../helpers/Animate";
+//import framer motion animation
+import { m, AnimatePresence } from "framer-motion";
 
-//import react spring
-import { useSpring, animated, config } from "@react-spring/web";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const NavBar = () => {
 	const [toggle, setToggle] = useState(false);
-	//react spring animation
-	useEffect(() => {
-		// console.log("before animation");
-		api.start({
-			from: {
-				opacity: toggle ? 0 : 1,
-				y: toggle ? -100 : 0,
-				scale: toggle ? 0.75 : 1,
+	//defining variants
+	const navbar = {
+		hidden: {
+			opacity: 0,
+			y: -100,
+			transition: {
+				duration: 0.2,
 			},
-			to: {
-				opacity: toggle ? 1 : 0,
-				y: toggle ? 0 : -100,
-				scale: toggle ? 1 : 0.75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 0.1,
+				when: "beforeChildren",
+				staggerChildren: 0.1,
 			},
-			//waits for animation to end before toggling invisible class
-			onRest: {
-				y: (result) => {
-					if (result.value === -100)
-						mobileNav.current.classList.add("invisible");
-				},
-			},
-		});
-	}, [toggle]);
-
-	const [styles, api] = useSpring(() => ({
-		delay: 0,
-		config: config.default,
-	}));
+		},
+	};
+	const navbarLinks = {
+		hidden: {
+			opacity: 0,
+			x: -100,
+		},
+		visible: {
+			opacity: 1,
+			x: 0,
+		},
+	};
 
 	//ref for nav mobile button
 	const mobileNav = useRef(null);
 	const handleHamburger = (e) => {
 		setToggle(!toggle);
-		mobileNav.current.classList.remove("invisible");
 	};
 	//populating desktop navbar
 	const desktopLinks = NavBarStatic.links.map((nav) => (
@@ -65,7 +63,7 @@ const NavBar = () => {
 				isActive ? "active-mobile-nav" : "mobile-nav"
 			}
 		>
-			{nav.text}
+			<m.div variants={navbarLinks}>{nav.text}</m.div>
 		</NavLink>
 	));
 	return (
@@ -105,13 +103,21 @@ const NavBar = () => {
 				</div>
 			</div>
 			{/* Mobile Navbar */}
-			<animated.div
-				style={styles}
-				ref={mobileNav}
-				className="flex-col  invisible top-0 bg-gray-900 w-full divide-y divide-gray-800 text-white px-8 py-4 sm:hidden z-0"
-			>
-				{mobileLinks}
-			</animated.div>
+			<AnimatePresence>
+				{toggle && (
+					<m.div
+						key="modal"
+						variants={navbar}
+						initial="hidden"
+						animate="visible"
+						exit="hidden"
+						ref={mobileNav}
+						className="flex-col top-0 bg-gray-900 w-full divide-y divide-gray-800 text-white px-8 py-4 sm:hidden z-0"
+					>
+						{mobileLinks}
+					</m.div>
+				)}
+			</AnimatePresence>
 		</nav>
 	);
 };

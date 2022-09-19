@@ -5,24 +5,29 @@ import Hero from "../sections/Hero";
 import NavBar from "../sections/NavBar";
 import TeamSection from "../sections/TeamSection";
 import WhyChooseUs from "../sections/WhyChooseUs";
-import { SlideUp } from "../helpers/Animate";
+import { FadeIn } from "../helpers/Animate";
+import Stats from "../sections/Stats";
 function Home() {
 	return (
 		<div>
 			<NavBar />
 			<Hero variant={Hero.variants.Home} />
-			<SlideUp>
+			<FadeIn>
 				<AboutSection />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
 				<WhyChooseUs />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
+				<Stats />
+			</FadeIn>
+			<FadeIn>
 				<ContactSection />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+
+			<FadeIn>
 				<TeamSection />
-			</SlideUp>
+			</FadeIn>
 
 			<Footer />
 		</div>

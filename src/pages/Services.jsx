@@ -4,21 +4,21 @@ import Hero from "../sections/Hero";
 import NavBar from "../sections/NavBar";
 import ServicesSection from "../sections/ServicesSection";
 import WhyChooseUs from "../sections/WhyChooseUs";
-import { SlideUp } from "../helpers/Animate";
+import { FadeIn } from "../helpers/Animate";
 const Services = () => {
 	return (
 		<div>
 			<NavBar />
 			<Hero variant={Hero.variants.Services} />
-			<SlideUp>
+			<FadeIn>
 				<ServicesSection />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
 				<WhyChooseUs />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
 				<ContactSection />
-			</SlideUp>
+			</FadeIn>
 
 			<Footer />
 		</div>

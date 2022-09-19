@@ -5,24 +5,24 @@ import NavBar from "../sections/NavBar";
 import Statement from "../sections/Statement";
 import Stats from "../sections/Stats";
 import TeamSection from "../sections/TeamSection";
-import { SlideUp } from "../helpers/Animate";
+import { FadeIn } from "../helpers/Animate";
 const About = () => {
 	return (
 		<div>
 			<NavBar />
 			<Hero variant={Hero.variants.About} />
-			<SlideUp>
+			<FadeIn>
 				<Statement />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
 				<Stats />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
 				<TeamSection />
-			</SlideUp>
-			<SlideUp>
+			</FadeIn>
+			<FadeIn>
 				<FrequentlyAsked />
-			</SlideUp>
+			</FadeIn>
 
 			<Footer />
 		</div>

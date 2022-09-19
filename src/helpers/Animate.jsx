@@ -1,42 +1,53 @@
 // React
-import { useState } from "react";
-
-// Libs
-import { Waypoint } from "react-waypoint";
-import { useSpring, animated, config } from "@react-spring/web";
+import { useEffect, useRef } from "react";
+import { m, animate, useInView } from "framer-motion";
 
 const SlideUp = ({ children }) => {
-	const [inView, setInview] = useState(false);
-
-	const transition = useSpring({
-		delay: 200,
-		to: {
-			y: !inView ? 24 : 0,
-			opacity: !inView ? 0 : 1,
-		},
-		config: config.gentle,
-	});
 	return (
-		<Waypoint onEnter={() => setInview(true)} onLeave={() => setInview(false)}>
-			<animated.div style={transition}>{children}</animated.div>
-		</Waypoint>
+		<m.div
+			initial={{ y: -56, opacity: 0 }}
+			transition={{ delay: 0.2, duration: 0.5 }}
+			whileInView={{ opacity: 1, y: 0 }}
+		>
+			{children}
+		</m.div>
 	);
 };
-
-const SlideDown = ({ children }) => {
-	const transition = useSpring({
-		delay: 300,
-		to: {
-			y: -56,
-			opacity: 100,
-		},
-		from: {
-			y: -100,
-			opacity: 0,
-		},
-		config: config.molasses,
-	});
-	return <animated.div style={transition}>{children}</animated.div>;
+const FadeIn = ({ children }) => {
+	return (
+		<m.div
+			initial={{ opacity: 0 }}
+			transition={{ delay: 0.2, duration: 0.5 }}
+			whileInView={{ opacity: 1 }}
+		>
+			{children}
+		</m.div>
+	);
 };
+const SlideDown = ({ children }) => {
+	return (
+		<m.div
+			initial={{ opacity: 0, x: -100 }}
+			transition={{ delay: 0.2, duration: 1 }}
+			whileInView={{ opacity: 1, x: 0 }}
+		>
+			{children}
+		</m.div>
+	);
+};
+const AnimateNumber = ({ startNo, endNo }) => {
+	const nodeRef = useRef();
+	const inView = useInView(nodeRef);
+	useEffect(() => {
+		inView &&
+			animate(startNo, endNo, {
+				duration: 2,
+				onUpdate(value) {
+					nodeRef.current.textContent = value.toFixed(0);
+				},
+			});
+	}, [inView, startNo, endNo]);
 
-export { SlideUp, SlideDown };
+	return <p ref={nodeRef} />;
+};
+export { SlideUp, FadeIn, SlideDown, AnimateNumber };

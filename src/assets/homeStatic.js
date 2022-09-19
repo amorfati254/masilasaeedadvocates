@@ -45,25 +45,25 @@ const WhyChooseUsSection = {
 	cards: [
 		{
 			key: "0",
-			number: "01.",
+			number: "01",
 			heading: "Experience",
 			text: "Get immediate free information and advice from experienced attorneys.Get immediate free information and advice from experienced attorneys.",
 		},
 		{
 			key: "1",
-			number: "02.",
+			number: "02",
 			heading: "Good Customer Service",
 			text: "Get immediate free information and advice from experienced attorneys.Get immediate free information and advice from experienced attorneys.",
 		},
 		{
 			key: "2",
-			number: "03.",
+			number: "03",
 			heading: "Experience",
 			text: "Get immediate free information and advice from experienced attorneys.Get immediate free information and advice from experienced attorneys.",
 		},
 		{
 			key: "3",
-			number: "04.",
+			number: "04",
 			heading: "Experience",
 			text: "Get immediate free information and advice from experienced attorneys.Get immediate free information and advice from experienced attorneys.",
 		},

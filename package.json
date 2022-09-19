@@ -5,16 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --sourcemap",
+    "preview": "vite preview",
+    "analyze": "source-map-explorer 'dist/assets/*.js' --no-border-checks"
   },
   "dependencies": {
     "@iconify/react": "^4.0.0",
-    "@react-spring/web": "^9.5.4",
+    "framer-motion": "^7.3.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-waypoint": "^10.3.0"
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@iconify-icon/react": "^1.0.0",
